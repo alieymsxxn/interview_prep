@@ -12,7 +12,7 @@ while end < len(arr):
     if len(buffer) < k:
         end += 1
     elif len(buffer) == k:
-        result = max(result, sum(buffer.values()))
+        result = max(result, (end - start + 1))
         end += 1
     elif len(buffer) > k:
         while len(buffer) > k:
