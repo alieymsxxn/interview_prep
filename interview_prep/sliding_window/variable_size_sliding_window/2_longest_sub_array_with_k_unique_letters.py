@@ -16,12 +16,10 @@ while end < len(arr):
         end += 1
     elif len(buffer) > k:
         while len(buffer) > k:
-            value = buffer[arr[start]]
-            
-            if (value - 1) == 0:
-                del buffer[arr[start]] 
-            else:
-                buffer.update({arr[start]: -1})
+            value = arr[start]
+            buffer.update({value: -1})
+            if buffer.get(value) == 0:
+                del buffer[value]                 
             
             start += 1
         end += 1
